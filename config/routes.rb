@@ -5,7 +5,7 @@ Monologue::Engine.routes.draw do
 
   get "/tags/:tag" =>"tags#show", as: "tags_page"
 
-  namespace :admin, path: "monologue" do
+  namespace :admin, path: "dashboard" do
     get "/" => "posts#index", as:  "" # responds to admin_url and admin_path
     get "/page/:page", to:  "posts#index", as:  "posts_page"
     get "logout" => "sessions#destroy"
